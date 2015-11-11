@@ -1,18 +1,30 @@
 GIT
   remote: git@github.com:eratchev/svc.git
-  revision: 98060f1983fabc6ce7f1afeffdb502df9a64790e
+  revision: e0d41d366ef321bbfdedda8a3e2b5e52a3509d5a
   specs:
     svc (0.1.0)
       sinatra
+      sinatra-contrib
 
 GEM
   specs:
+    backports (3.6.7)
+    multi_json (1.11.2)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
+    rack-test (0.6.3)
+      rack (>= 1.0)
     sinatra (1.4.6)
       rack (~> 1.4)
       rack-protection (~> 1.4)
+      tilt (>= 1.3, < 3)
+    sinatra-contrib (1.4.6)
+      backports (>= 2.0)
+      multi_json
+      rack-protection
+      rack-test
+      sinatra (~> 1.4.0)
       tilt (>= 1.3, < 3)
     tilt (1.4.1)
 

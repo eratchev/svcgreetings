@@ -1,10 +1,7 @@
-class GreetingsController < Sinatra::Base
-
+class GreetingsController < ApplicationController
 
   get '/' do
     'Hello World'
   end
-
-
 
 end
