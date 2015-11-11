@@ -2,7 +2,9 @@ require 'rubygems'
 require 'bundler'
 require 'sinatra/base'
 
-Bundler.require
+ENV['RACK_ENV'] ||= 'development'
+Bundler.require :default, ENV['RACK_ENV'].to_sym
+
 
 # pull in the helpers and controllers
 Dir.glob('./app/{helpers,controllers}/*.rb').each { |file| require file }

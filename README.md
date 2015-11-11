@@ -11,13 +11,17 @@ Example RESTful JSON mirco-service
         gem install bundler
         bundle install
 
-2. Run server on port 4567
+2. Run tests
+  
+        bundle exec rspec
+
+3. Run server on port 4567
   
         rackup -p 4567
 
-3. Check `http://localhost:4567/greetings`
+4. Check `http://localhost:4567/greetings`
 
-4. Check `http://localhost:4567/health_check`
+5. Check `http://localhost:4567/health_check`
 
 
 ## Resources
