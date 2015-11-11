@@ -1,1 +1,1 @@
-gem 'svc', :path => '~/play/svc'
+gem 'svc', git: 'git@github.com:eratchev/svc.git'

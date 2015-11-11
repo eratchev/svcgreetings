@@ -1,5 +1,6 @@
-PATH
-  remote: ~/play/svc
+GIT
+  remote: git@github.com:eratchev/svc.git
+  revision: 98060f1983fabc6ce7f1afeffdb502df9a64790e
   specs:
     svc (0.1.0)
       sinatra
