@@ -11,17 +11,31 @@ Example RESTful JSON mirco-service
         gem install bundler
         bundle install
 
-2. Run tests
+2. Create DB user (modify IP to the one postgres is running on)
+
+        createuser greetings -h 192.168.99.100 -p 5433 -U postgres -S -R -d
+
+3. Create and migrate DB
+
+        bundle exec rake db:migrate
+        bundle exec rake db:test:prepare
+
+4. Run tests
   
         bundle exec rspec
 
-3. Run server on port 4567
+5. Run server on port 4567
   
         rackup -p 4567
 
-4. Check `http://localhost:4567/greetings`
+6. Create some greetings
 
-5. Check `http://localhost:4567/health_check`
+        curl -H "Content-Type: application/json" -X POST -d '{"message":"hi1"}' localhost:4567/greetings
+        curl -H "Content-Type: application/json" -X POST -d '{"message":"hi2"}' localhost:4567/greetings
+        
+7. Check `http://localhost:4567/greetings`
+
+8. Check `http://localhost:4567/health_check`
 
 
 ## Resources

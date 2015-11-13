@@ -1,4 +1,6 @@
 .bundle/
 *.iml
 .idea
+*.sqllite3
+
 
