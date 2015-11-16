@@ -10,8 +10,8 @@ test:
 
 development:
   <<: *default
-  database:   <%= ENV['JARVIS_DB_NAME']     || 'greetings_development' %>
-  host:       <%= ENV['JARVIS_DB_HOST']     || ENV['DOCKER_HOST'].nil? ? 'localhost': ENV['DOCKER_HOST'][/\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b/] %>
-  port:       <%= ENV['JARVIS_DB_PORT']     || '5433'         %>
-  username:   <%= ENV['JARVIS_DB_USERNAME'] || 'greetings'    %>
-  password:   <%= ENV['JARVIS_DB_PASSWORD'] || ''             %>
+  database:   <%= ENV['GREETINGS_DB_NAME']     || 'greetings_development' %>
+  host:       <%= ENV['GREETINGS_DB_HOST']     || ENV['DOCKER_HOST'].nil? ? 'localhost': ENV['DOCKER_HOST'][/\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b/] %>
+  port:       <%= ENV['GREETINGS_DB_PORT']     || '5433'         %>
+  username:   <%= ENV['GREETINGS_DB_USERNAME'] || 'greetings'    %>
+  password:   <%= ENV['GREETINGS_DB_PASSWORD'] || ''             %>
