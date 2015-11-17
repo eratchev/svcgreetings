@@ -4,6 +4,7 @@ require 'sinatra/activerecord'
 require 'sidekiq'
 require 'sidekiq/api'
 require 'sidekiq/web'
+require 'sidekiq-statistic'
 require_relative '../workers/greetings_worker'
 
 

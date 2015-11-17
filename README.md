@@ -17,6 +17,7 @@ Example RESTful JSON mirco-service
 
 3. Create and migrate DB
 
+        bundle exec rake db:create
         bundle exec rake db:migrate
         bundle exec rake db:test:prepare
 
