@@ -1,0 +1,6 @@
+
+test:
+  redis_url: redis://localhost:6379/0
+
+development:
+  redis_url: "redis://<%= ENV['DOCKER_HOST'].nil? ? 'redis://localhost:6379/0' : ENV['DOCKER_HOST'][/\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b/] %>:6379/0"
