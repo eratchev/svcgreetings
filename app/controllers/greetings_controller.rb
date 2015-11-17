@@ -10,8 +10,6 @@ class GreetingsController < ApplicationController
   post '/' do
     request.body.rewind
     request_payload = JSON.parse request.body.read
-    # @greeting = Greeting.create!(request_payload)
-    # redirect to("/greetings/#{@greeting.id}")
     GreetingsWorker.perform_async(request_payload)
   end
 

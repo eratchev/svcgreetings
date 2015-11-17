@@ -32,26 +32,13 @@ describe 'Greetings Service' do
   describe 'POST /' do
     let(:body) { { :message => 'hello3' }.to_json }
     before do
-      expect{
-        post '/', body, { 'Content-Type' => 'application/json' }
-      }.to change(Greeting,:count).by(1)
+      allow(GreetingsWorker).to receive(:perform_async)
+      post '/', body, { 'Content-Type' => 'application/json' }
     end
 
-    it 'is successful' do
-      expect(Greeting.all.last.message).to eq('hello3')
-      expect(last_response).to be_redirect
-      expect(last_response.location).to include "/greetings/#{Greeting.all.last.id}"
+    it 'call worker' do
+      expect(GreetingsWorker).to have_received(:perform_async).with({ 'message' => 'hello3' })
     end
-  end
-
-  describe 'POST / with invalid data' do
-    let(:body) { { :message => '' }.to_json }
-    it 'fails' do
-      expect{
-        post '/', body, { 'Content-Type' => 'application/json' }
-      }.to raise_exception(ActiveRecord::RecordInvalid)
-    end
-
   end
 
 
