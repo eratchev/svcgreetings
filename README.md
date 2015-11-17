@@ -44,6 +44,11 @@ Example RESTful JSON mirco-service
 
 10. Check `http://localhost:4567/sidekiq`
 
+11. Test with apache benchmark
+
+        ab -n 1000 -c 10 -T 'application/json' -p spec/data/greetings.json localhost:4567/greetings
+
+
 ## Resources
     * [Sinatra Getting Started](http://www.sinatrarb.com/intro.html)
     * [Sinatra Writing Extensions](http://www.sinatrarb.com/extensions.html)
