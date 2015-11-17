@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:eratchev/svc.git
-  revision: 3d32a9683cc53613cb67d131e46de136e4bc6cc8
+  revision: 57fe2ca1fe71c313faa1dd21dcc830692897650f
   specs:
     svc (0.1.0)
       activerecord

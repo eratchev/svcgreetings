@@ -11,4 +11,14 @@ class ApplicationController < Sinatra::Base
   set :service_name, 'greetings'
   config_file '../../config/*.erb'
 
+
+
+  Sidekiq.configure_server do |config|
+    config.redis = { url: settings.redis_url }
+  end
+
+  Sidekiq.configure_client do |config|
+    config.redis = { url: settings.redis_url }
+  end
+
 end
