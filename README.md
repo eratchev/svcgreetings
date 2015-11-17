@@ -28,15 +28,20 @@ Example RESTful JSON mirco-service
   
         rackup -p 4567
 
-6. Create some greetings
+6. Run sidekiq
+
+        bundle exec sidekiq -r ./app/controllers/application_controller.rb
+
+7. Create some greetings
 
         curl -H "Content-Type: application/json" -X POST -d '{"message":"hi1"}' localhost:4567/greetings
         curl -H "Content-Type: application/json" -X POST -d '{"message":"hi2"}' localhost:4567/greetings
         
-7. Check `http://localhost:4567/greetings`
+8. Check `http://localhost:4567/greetings`
 
-8. Check `http://localhost:4567/health_check`
+9. Check `http://localhost:4567/health_check`
 
+10. Check `http://localhost:4567/sidekiq`
 
 ## Resources
     * [Sinatra Getting Started](http://www.sinatrarb.com/intro.html)

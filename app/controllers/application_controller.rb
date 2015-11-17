@@ -1,6 +1,10 @@
 require 'sinatra/base'
 require 'sinatra/health'
 require 'sinatra/activerecord'
+require 'sidekiq'
+require 'sidekiq/api'
+require 'sidekiq/web'
+require_relative '../workers/greetings_worker'
 
 
 class ApplicationController < Sinatra::Base
