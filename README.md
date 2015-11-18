@@ -50,5 +50,5 @@ Example RESTful JSON mirco-service
 
 
 ## Resources
-    * [Sinatra Getting Started](http://www.sinatrarb.com/intro.html)
-    * [Sinatra Writing Extensions](http://www.sinatrarb.com/extensions.html)
+* [Sinatra Getting Started](http://www.sinatrarb.com/intro.html)
+* [Sinatra Writing Extensions](http://www.sinatrarb.com/extensions.html)
