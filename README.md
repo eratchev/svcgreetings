@@ -48,6 +48,15 @@ Example RESTful JSON mirco-service
 
         ab -n 1000 -c 10 -T 'application/json' -p spec/data/greetings.json localhost:4567/greetings
 
+## Database rake tasks
+
+- List all rake task
+
+        bundle exec rake -T
+
+- Create a new database migration
+
+        rake db:create_migration  # Create a migration (parameters: NAME, VERSION)
 
 ## Resources
 * [Sinatra Getting Started](http://www.sinatrarb.com/intro.html)
